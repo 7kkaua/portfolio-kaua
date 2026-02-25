@@ -1,5 +1,5 @@
 /*  IMPORTAÇÃO DAS FONTES (OUTFIT PARA TÍTULOS & INTER PARA LEITURA) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,7 @@
     /* Aplicando o preto suave e a fonte base Inter para o corpo */
     @apply bg-soft-black text-slate-200 antialiased;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   /*  CUSTOMIZAÇÃO DA BARRA DE ROLAGEM (FUTURISTA & MODERNA) */
@@ -42,5 +42,5 @@
 
 /*  CLASSES UTILITÁRIAS EXTRAS */
 .font-sans {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }

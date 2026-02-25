@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
 const ScrollReveal = ({ children, className = "", delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,10 +14,10 @@ const ScrollReveal = ({ children, className = "", delay = 0 }) => {
           }
         });
       },
-      { 
-        threshold: 0.15, 
-        rootMargin: "0px 0px -50px 0px" 
-      }
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+      },
     );
 
     const currentRef = domRef.current;
@@ -37,9 +37,7 @@ const ScrollReveal = ({ children, className = "", delay = 0 }) => {
       ref={domRef}
       style={{ transitionDelay: `${delay}ms` }}
       className={`transition-all duration-1000 ease-out will-change-[opacity,transform] ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-12'
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       } ${className}`}
     >
       {children}

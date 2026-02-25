@@ -1,5 +1,5 @@
-import React from 'react';
-import { ExternalLink, Github, Layers } from 'lucide-react';
+import React from "react";
+import { ExternalLink, Github, Layers } from "lucide-react";
 
 const ProjectCard = ({ title, description, tags, githubLink, liveLink }) => {
   return (
@@ -12,10 +12,10 @@ const ProjectCard = ({ title, description, tags, githubLink, liveLink }) => {
         </div>
         <div className="flex gap-2 text-slate-400">
           {githubLink && (
-            <a 
-              href={githubLink} 
-              target="_blank" 
-              rel="noreferrer" 
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noreferrer"
               aria-label={`Ver código fonte do projeto ${title} no GitHub`}
               className="p-2 rounded-full hover:text-white hover:bg-navy-blue-light/30 focus:outline-none focus:ring-2 focus:ring-accent-blue transition-all"
             >
@@ -23,10 +23,10 @@ const ProjectCard = ({ title, description, tags, githubLink, liveLink }) => {
             </a>
           )}
           {liveLink && (
-            <a 
-              href={liveLink} 
-              target="_blank" 
-              rel="noreferrer" 
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noreferrer"
               aria-label={`Visitar o projeto ${title} online`}
               className="p-2 rounded-full hover:text-white hover:bg-navy-blue-light/30 focus:outline-none focus:ring-2 focus:ring-accent-blue transition-all"
             >
@@ -39,7 +39,7 @@ const ProjectCard = ({ title, description, tags, githubLink, liveLink }) => {
         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300 font-sans tracking-tight">
           {title}
         </h3>
-        
+
         <p className="text-slate-400 text-sm leading-relaxed mb-8">
           {description}
         </p>
@@ -47,8 +47,8 @@ const ProjectCard = ({ title, description, tags, githubLink, liveLink }) => {
       <footer className="pt-5 border-t border-navy-blue-light/20 mt-auto">
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
-            <span 
-              key={index} 
+            <span
+              key={index}
               className="text-[11px] uppercase tracking-wider font-bold px-3 py-1.5 bg-navy-blue/30 border border-navy-blue-light/40 text-accent-blue rounded-full shadow-sm"
             >
               {tag}
