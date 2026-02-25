@@ -21,7 +21,7 @@ const HomePage = () => {
 
           <ScrollReveal delay={150}>
             <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[1.1] font-sans">
-              Transformando conceitos em <br className="hidden md:block" />
+              Transformando ideias em <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-blue-400 to-indigo-400 drop-shadow-sm">
                 interfaces funcionais.
               </span>
