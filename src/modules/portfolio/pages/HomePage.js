@@ -1,24 +1,18 @@
 import React from 'react';
 import { ChevronRight, Code2, Layout, Database, Briefcase, UserRound } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-// 🚀 IMPORTAÇÃO DO NOVO COMPONENTE DE ANIMAÇÃO
 import ScrollReveal from '../components/ScrollReveal';
 
 const HomePage = () => {
   return (
     <div className="overflow-hidden">
-      
-      {/* 🌌 HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center justify-center py-20 px-4">
-        {/* Efeitos de Luz em Background */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-blue/10 rounded-full blur-[120px] -z-10 animate-pulse duration-1000" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-navy-blue/20 rounded-full blur-[100px] -z-10" />
 
         <div className="max-w-4xl text-center relative z-10">
           
           <ScrollReveal>
-            {/* 💼 BADGE PROFISSIONAL (MALETA) COM EFEITO */}
             <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-navy-blue-light/20 border border-accent-blue/30 text-accent-blue text-xs font-bold uppercase tracking-widest mb-8 cursor-default group hover:bg-navy-blue-light/40 transition-colors duration-300 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
               <Briefcase size={14} className="shrink-0 animate-pulse" aria-hidden="true" />
               <span className="leading-none tracking-wider">Disponível para novos desafios</span>
@@ -62,7 +56,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 🛠️ CORE STACK SECTION */}
       <section className="py-24 bg-gradient-to-b from-navy-blue/5 to-soft-black border-y border-navy-blue-light/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -75,7 +68,6 @@ const HomePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* Card 1 */}
             <ScrollReveal delay={150}>
               <div className="group h-full p-8 rounded-3xl bg-soft-black/80 backdrop-blur-sm border border-navy-blue-light/30 hover:border-accent-blue/50 hover:bg-navy-blue/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-blue/5">
                 <div className="w-14 h-14 rounded-2xl bg-navy-blue-light/20 flex items-center justify-center mb-6 group-hover:bg-accent-blue/20 transition-colors duration-300">
@@ -88,7 +80,6 @@ const HomePage = () => {
               </div>
             </ScrollReveal>
 
-            {/* Card 2 */}
             <ScrollReveal delay={300}>
               <div className="group h-full p-8 rounded-3xl bg-soft-black/80 backdrop-blur-sm border border-navy-blue-light/30 hover:border-accent-blue/50 hover:bg-navy-blue/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-blue/5">
                 <div className="w-14 h-14 rounded-2xl bg-navy-blue-light/20 flex items-center justify-center mb-6 group-hover:bg-accent-blue/20 transition-colors duration-300">
@@ -101,7 +92,6 @@ const HomePage = () => {
               </div>
             </ScrollReveal>
 
-            {/* Card 3 */}
             <ScrollReveal delay={450}>
               <div className="group h-full p-8 rounded-3xl bg-soft-black/80 backdrop-blur-sm border border-navy-blue-light/30 hover:border-accent-blue/50 hover:bg-navy-blue/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-blue/5">
                 <div className="w-14 h-14 rounded-2xl bg-navy-blue-light/20 flex items-center justify-center mb-6 group-hover:bg-accent-blue/20 transition-colors duration-300">

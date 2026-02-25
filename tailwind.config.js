@@ -17,7 +17,7 @@ module.exports = {
       fontFamily: {
         // Fonte para o corpo do texto
         sans: ['Inter', 'sans-serif'],
-        // 🚀 NOVA FONTE PARA O LOGOTIPO
+        // NOVA FONTE PARA O LOGOTIPO
         logo: ['Outfit', 'sans-serif'],
       },
     },

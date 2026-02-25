@@ -1,7 +1,5 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-
-// 🚀 IMPORTAÇÃO DO COMPONENTE DE SCROLL REVEAL
 import ScrollReveal from '../components/ScrollReveal';
 
 const ProjectsPage = () => {
@@ -25,8 +23,6 @@ const ProjectsPage = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-20 overflow-hidden relative">
-      
-      {/* 🌌 Efeito de Luz de Fundo */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <ScrollReveal>
@@ -41,7 +37,6 @@ const ProjectsPage = () => {
         </header>
       </ScrollReveal>
 
-      {/* 🚀 Grid de Projetos com entrada em cascata */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ScrollReveal key={index} delay={index * 200}>
@@ -50,7 +45,6 @@ const ProjectsPage = () => {
         ))}
       </div>
 
-      {/* 🎯 CALL TO ACTION (CTA) PREMIUM */}
       <ScrollReveal delay={300}>
         <div className="mt-32 relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 via-navy-blue/20 to-accent-blue/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />

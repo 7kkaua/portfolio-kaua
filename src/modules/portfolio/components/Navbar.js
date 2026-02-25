@@ -6,12 +6,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // Fecha o menu mobile automaticamente ao trocar de rota
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Previne a rolagem do corpo da página quando o menu lateral estiver aberto
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -23,13 +21,11 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  // 💻 Estilos para o menu Desktop
   const navLinkStyles = ({ isActive }) => 
     `transition-all duration-300 hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium ${
       isActive ? 'text-accent-blue border-b-2 border-accent-blue' : 'text-slate-300'
     }`;
 
-  // 📱 Estilos premium para o Drawer Mobile
   const mobileNavLinkStyles = ({ isActive }) =>
     `flex items-center w-full px-5 py-4 text-lg font-medium rounded-2xl transition-all duration-300 ${
       isActive 
@@ -42,8 +38,6 @@ const Navbar = () => {
       <nav className="sticky top-0 z-40 bg-soft-black/80 backdrop-blur-md border-b border-navy-blue-light/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            
-            {/* 📱 BOTÃO MOBILE (ALINHADO À ESQUERDA) */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(true)}
@@ -54,8 +48,6 @@ const Navbar = () => {
                 <Menu size={32} />
               </button>
             </div>
-
-            {/* 🚀 LOGOTIPO (Direita no Mobile, Esquerda no Desktop) - COM TIPOGRAFIA FORTE */}
             <div className="flex-shrink-0 flex items-center gap-3 group cursor-pointer z-50">
               <div className="bg-accent-blue/10 p-2.5 rounded-xl border border-accent-blue/20 shadow-[0_0_10px_rgba(56,189,248,0.05)] group-hover:shadow-[0_0_15px_rgba(56,189,248,0.15)] transition-all duration-300">
                 <Code2 className="text-accent-blue group-hover:rotate-12 transition-transform duration-300" size={22} />
@@ -65,8 +57,6 @@ const Navbar = () => {
                 <span className="font-bold text-accent-blue ml-1.5">Azeredo</span>
               </span>
             </div>
-
-            {/* 💻 MENU DESKTOP (Alinhado à Direita) */}
             <div className="hidden md:flex items-center space-x-8">
               <NavLink to="/" className={navLinkStyles}>Início</NavLink>
               <NavLink to="/sobre" className={navLinkStyles}>Sobre Mim</NavLink>
@@ -88,8 +78,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      {/* 🌑 OVERLAY DO MENU MOBILE (Fundo escuro e clicável) */}
       <div 
         className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-50 transition-opacity duration-500 md:hidden ${
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -97,14 +85,11 @@ const Navbar = () => {
         onClick={() => setIsOpen(false)}
         aria-hidden="true"
       />
-
-      {/* 📱 GAVETA LATERAL DESLIZANTE (OFF-CANVAS DRAWER) */}
       <div 
         className={`fixed top-0 left-0 h-full w-[85%] max-w-sm bg-soft-black/95 backdrop-blur-xl border-r border-navy-blue-light/30 z-50 transform transition-transform duration-500 ease-in-out md:hidden flex flex-col shadow-2xl ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        {/* Cabeçalho do Menu Lateral */}
         <div className="h-20 flex items-center justify-between px-6 border-b border-navy-blue-light/20">
           <span className="text-sm tracking-[0.3em] text-slate-400 uppercase font-bold">Navegação</span>
           <button 
@@ -115,8 +100,6 @@ const Navbar = () => {
             <X size={28} />
           </button>
         </div>
-
-        {/* Links do Menu Lateral */}
         <div className="flex flex-col px-6 py-10 space-y-4 overflow-y-auto flex-grow">
           <NavLink to="/" className={mobileNavLinkStyles}>
             Início
@@ -131,8 +114,6 @@ const Navbar = () => {
             Projetos
           </NavLink>
         </div>
-
-        {/* Rodapé do Menu Lateral (Call to Action) */}
         <div className="p-6 border-t border-navy-blue-light/20 mt-auto bg-navy-blue/5">
           <a 
             href="https://www.linkedin.com/in/kau%C3%A3-d-a4251a213/" 

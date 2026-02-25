@@ -1,7 +1,5 @@
 import React from 'react';
 import { Briefcase, GraduationCap, Calendar, CheckCircle2 } from 'lucide-react';
-
-// 🚀 IMPORTAÇÃO DO COMPONENTE DE SCROLL REVEAL
 import ScrollReveal from '../components/ScrollReveal';
 
 const ExperiencePage = () => {
@@ -37,7 +35,6 @@ const ExperiencePage = () => {
       </ScrollReveal>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-12">
-        {/* COLUNA DA ESQUERDA: FORMAÇÃO */}
         <section className="space-y-8">
           <ScrollReveal delay={150}>
             <div className="flex items-center gap-3 text-accent-blue font-bold text-xl uppercase tracking-wider">
@@ -58,8 +55,6 @@ const ExperiencePage = () => {
             </article>
           </ScrollReveal>
         </section>
-
-        {/* COLUNA DA DIREITA: EXPERIÊNCIA (Ocupa 2 colunas) */}
         <section className="lg:col-span-2 space-y-12">
           <ScrollReveal delay={150}>
             <div className="flex items-center gap-3 text-accent-blue font-bold text-xl uppercase tracking-wider">
@@ -71,7 +66,6 @@ const ExperiencePage = () => {
             {experiences.map((exp, index) => (
               <ScrollReveal key={index} delay={300 + (index * 150)}>
                 <article className="relative group">
-                  {/* Indicador de Timeline com Efeito Glow no Hover */}
                   <div className="absolute -left-[43px] top-1.5 w-5 h-5 bg-soft-black border-2 border-navy-blue-light group-hover:border-accent-blue rounded-full transition-all duration-300 shadow-[0_0_0_0_rgba(56,189,248,0)] group-hover:shadow-[0_0_12px_3px_rgba(56,189,248,0.4)] z-10" />
                   
                   <div className="mb-2 flex flex-col md:flex-row md:items-center justify-between gap-3">

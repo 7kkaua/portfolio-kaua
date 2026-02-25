@@ -4,20 +4,16 @@ import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Mensagem pré-definida para o WhatsApp (codificada para URL)
+
   const whatsappMessage = encodeURIComponent("Olá, Kauã! Tudo bem? Vi o seu portfólio e gostaria de conversar sobre uma oportunidade.");
 
   return (
     <footer className="bg-soft-black border-t border-navy-blue-light/30 py-12 relative overflow-hidden">
-      {/* 🌌 Efeito de brilho de fundo sutil */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          
-          {/* IDENTIDADE */}
           <div className="text-center md:text-left">
-            {/* 🚀 LOGOTIPO PREMIUM REFINADO */}
             <h2 className="text-2xl tracking-[0.2em] text-white uppercase font-sans flex items-center justify-center md:justify-start">
               <span className="font-light">Kauã</span>
               <span className="font-bold text-accent-blue ml-1.5">Azeredo</span>
@@ -26,8 +22,6 @@ const Footer = () => {
               Desenvolvendo interfaces de alto impacto e centradas no usuário.
             </p>
           </div>
-
-          {/* REDES E CONTATO */}
           <div className="flex flex-col items-center md:items-end gap-5">
             <div className="flex space-x-5">
               <a 
@@ -48,8 +42,6 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
-              
-              {/* ✉️ LINK DE E-MAIL (Abre o app padrão com assunto preenchido) */}
               <a 
                 href="mailto:contato.kauaazeredo@gmail.com?subject=Contato%20via%20Portfólio" 
                 aria-label="Enviar um e-mail para Kauã Azeredo"
@@ -58,8 +50,6 @@ const Footer = () => {
                 <Mail size={20} />
               </a>
             </div>
-            
-            {/* 📱 LINK DIRETO PARA O WHATSAPP */}
             <a 
               href={`https://wa.me/5511952780693?text=${whatsappMessage}`}
               target="_blank"

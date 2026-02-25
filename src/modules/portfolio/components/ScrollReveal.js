@@ -5,21 +5,18 @@ const ScrollReveal = ({ children, className = "", delay = 0 }) => {
   const domRef = useRef();
 
   useEffect(() => {
-    // Configuramos o observador para detectar quando o elemento entra na tela
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Quando o elemento cruzar a margem da tela (threshold), ativamos a visibilidade
           if (entry.isIntersecting) {
             setIsVisible(true);
-            // Paramos de observar após a primeira animação para não repetir toda hora
             observer.unobserve(entry.target);
           }
         });
       },
       { 
-        threshold: 0.15, // Dispara quando 15% do elemento estiver visível
-        rootMargin: "0px 0px -50px 0px" // Dá um pequeno respiro antes de animar
+        threshold: 0.15, 
+        rootMargin: "0px 0px -50px 0px" 
       }
     );
 

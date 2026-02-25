@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
-// 🚀 IMPORTAÇÃO DO LAYOUT GLOBAL
+// IMPORTAÇÃO DO LAYOUT GLOBAL
 import PortfolioLayout from './modules/portfolio/layout/PortfolioLayout';
 
-// 🚀 IMPORTAÇÃO DAS PÁGINAS (MÓDULO PORTFOLIO)
+// IMPORTAÇÃO DAS PÁGINAS (MÓDULO PORTFOLIO)
 import HomePage from './modules/portfolio/pages/HomePage';
 import AboutPage from './modules/portfolio/pages/AboutPage';
 import ExperiencePage from './modules/portfolio/pages/ExperiencePage';
 import ProjectsPage from './modules/portfolio/pages/ProjectsPage';
 
-// 🌟 COMPONENTE DE SCROLL: Força a página para o topo a cada mudança de rota
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 

@@ -5,8 +5,6 @@ import ScrollReveal from '../components/ScrollReveal';
 const AboutPage = () => {
   return (
     <section className="max-w-5xl mx-auto px-4 py-20 overflow-hidden">
-      
-      {/* 🌌 Efeito de Luz de Fundo */}
       <div className="absolute top-40 left-0 w-72 h-72 bg-accent-blue/5 rounded-full blur-[100px] pointer-events-none -z-10" />
 
       <ScrollReveal>
@@ -22,8 +20,6 @@ const AboutPage = () => {
       </ScrollReveal>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        {/* 📖 COLUNA DA ESQUERDA: O TEXTO NARRATIVO (Ocupa 7 colunas) */}
         <div className="lg:col-span-7 space-y-8 text-slate-400 text-lg leading-relaxed font-light">
           <ScrollReveal delay={150}>
             <p>
@@ -49,8 +45,6 @@ const AboutPage = () => {
             </p>
           </ScrollReveal>
         </div>
-
-        {/* 🎯 COLUNA DA DIREITA: DESTAQUES (Ocupa 5 colunas) */}
         <div className="lg:col-span-5 space-y-6">
           <ScrollReveal delay={200}>
             <div className="p-6 rounded-2xl bg-soft-black/80 backdrop-blur-sm border border-navy-blue-light/30 hover:border-accent-blue/40 transition-colors">
