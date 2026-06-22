@@ -1,5 +1,5 @@
 import React from "react";
-import { User, Code2, BookOpen, Terminal, Sparkles } from "lucide-react";
+import { Code2, BookOpen, Terminal, Sparkles } from "lucide-react";
 import ScrollReveal from "../components/ScrollReveal";
 
 const AboutPage = () => {

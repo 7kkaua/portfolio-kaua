@@ -1,5 +1,5 @@
 import React from "react";
-import { Briefcase, GraduationCap, Calendar, CheckCircle2 } from "lucide-react";
+import { Briefcase, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "../components/ScrollReveal";
 
 const ExperiencePage = () => {
