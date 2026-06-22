@@ -5,20 +5,28 @@ import ScrollReveal from "../components/ScrollReveal";
 const ExperiencePage = () => {
   const experiences = [
     {
+      company: "Ecossistema SaaS (Projetos Independentes)",
+      role: "Fundador & Desenvolvedor Full-Stack",
+      period: "2023 - Presente",
+      description:
+        "Idealização, arquitetura e desenvolvimento do zero de três plataformas SaaS multi-tenant. Criação de sistemas complexos com controle hierárquico (RBAC), motores de assinatura recorrente via Mercado Pago, gestão de estoque inteligente e integrações com Google Maps.",
+      techs: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "APIs"],
+    },
+    {
       company: "SMJ CodeSystem",
-      role: "Desenvolvedor Front-end",
+      role: "Desenvolvedor Full-Stack",
       period: "06/2024 - 10/2025",
       description:
-        "Focado no desenvolvimento de sites e sistemas de gerenciamento com ênfase em UX. Criação de interfaces responsivas e intuitivas.",
-      techs: ["React.js", "Vue.js", "Tailwind CSS", "API RESTful"],
+        "Atuação no desenvolvimento de sistemas de gerenciamento e plataformas web escaláveis, unindo a criação de interfaces responsivas e intuitivas com integrações avançadas de back-end.",
+      techs: ["React.js", "Vue.js", "Node.js", "API RESTful"],
     },
     {
       company: "Nova Presto",
-      role: "Jovem Aprendiz",
+      role: "Aprendiz em Gestão e Serviços",
       period: "03/2022 - 06/2023",
       description:
-        "Atuação no desenvolvimento web, correção de bugs e aplicação de boas práticas de codificação.",
-      techs: ["Web Development", "Bug Fixing", "Clean Code"],
+        "Utilização de recursos tecnológicos para análise e controle de informações. Atuação com resolução de problemas lógicos e suporte operacional estratégico.",
+      techs: ["Gestão de Dados", "Processos Operacionais", "Soft Skills"],
     },
   ];
 
@@ -29,54 +37,37 @@ const ExperiencePage = () => {
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4 font-sans">
             Minha{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-blue-400">
-              Trajetória
+              Trajetória.
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl text-lg font-light">
-            Um resumo da minha jornada acadêmica e profissional no
-            desenvolvimento web, com foco na evolução contínua.
+          <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto md:mx-0">
+            A jornada acadêmica e profissional que moldou minha visão e
+            habilidades na engenharia de software.
           </p>
         </header>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-12">
-        <section className="space-y-8">
-          <ScrollReveal delay={150}>
-            <div className="flex items-center gap-3 text-accent-blue font-bold text-xl uppercase tracking-wider">
-              <GraduationCap size={24} /> Formação
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={300}>
-            <article className="group p-6 bg-soft-black/80 backdrop-blur-sm border-l-2 border-accent-blue rounded-r-2xl hover:bg-navy-blue/10 transition-colors duration-300 shadow-lg hover:shadow-accent-blue/5">
-              <h4 className="text-white font-bold text-lg group-hover:text-accent-blue transition-colors">
-                Análise e Desenvolvimento de Sistemas
-              </h4>
-              <p className="text-slate-400 text-sm mt-2 font-medium">
-                Universidade Mogi das Cruzes
-              </p>
-              <div className="inline-flex items-center gap-2 text-slate-500 text-sm mt-4 font-mono bg-navy-blue-light/10 px-3 py-1.5 rounded-md">
-                <Calendar size={14} className="text-accent-blue" />
-                <time dateTime="2025-08/2027-12">08/2025 - 12/2027</time>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+        <section className="md:col-span-12">
+          <ScrollReveal>
+            <div className="flex items-center gap-3 mb-10 pb-4 border-b border-navy-blue-light/30">
+              <div className="p-2.5 bg-accent-blue/10 rounded-lg text-accent-blue">
+                <Briefcase size={24} />
               </div>
-            </article>
-          </ScrollReveal>
-        </section>
-        <section className="lg:col-span-2 space-y-12">
-          <ScrollReveal delay={150}>
-            <div className="flex items-center gap-3 text-accent-blue font-bold text-xl uppercase tracking-wider">
-              <Briefcase size={24} /> Experiência Profissional
+              <h3 className="text-2xl font-bold text-white tracking-tight">
+                Experiência Prática
+              </h3>
             </div>
           </ScrollReveal>
 
-          <div className="relative border-l-2 border-navy-blue-light/30 pl-8 space-y-12 ml-3">
+          <div className="relative border-l-2 border-navy-blue-light/30 ml-4 md:ml-6 space-y-12">
             {experiences.map((exp, index) => (
-              <ScrollReveal key={index} delay={300 + index * 150}>
-                <article className="relative group">
-                  <div className="absolute -left-[43px] top-1.5 w-5 h-5 bg-soft-black border-2 border-navy-blue-light group-hover:border-accent-blue rounded-full transition-all duration-300 shadow-[0_0_0_0_rgba(56,189,248,0)] group-hover:shadow-[0_0_12px_3px_rgba(56,189,248,0.4)] z-10" />
+              <ScrollReveal key={index} delay={index * 150}>
+                <article className="relative pl-8 md:pl-10 group">
+                  <span className="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-soft-black border-4 border-navy-blue-light group-hover:border-accent-blue transition-colors duration-300 shadow-[0_0_10px_rgba(56,189,248,0)] group-hover:shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
 
-                  <div className="mb-2 flex flex-col md:flex-row md:items-center justify-between gap-3">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-accent-blue transition-colors duration-300">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-accent-blue transition-colors duration-300">
                       {exp.role}
                     </h3>
                     <span className="text-xs font-mono text-accent-blue bg-accent-blue/10 px-4 py-1.5 rounded-full border border-accent-blue/20 whitespace-nowrap shadow-sm">

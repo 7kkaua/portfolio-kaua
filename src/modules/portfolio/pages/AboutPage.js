@@ -22,97 +22,38 @@ const AboutPage = () => {
         </header>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-7 space-y-8 text-slate-400 text-lg leading-relaxed font-light">
-          <ScrollReveal delay={150}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="space-y-6 text-slate-400 text-lg leading-relaxed font-light">
+          <ScrollReveal delay={100}>
             <p>
-              Minha paixão pela tecnologia não é de hoje; ela me acompanha desde
-              a infância. Sempre fui fascinado por entender como as coisas
-              funcionam por trás das telas. Hoje, dedico essa mesma curiosidade
-              e energia para transformar conceitos visuais em interfaces
-              funcionais, dinâmicas e estritamente centradas na experiência do
-              usuário.
+              Sou um Desenvolvedor Full-Stack apaixonado por tirar ideias do papel e construir produtos digitais escaláveis do zero à produção. Meu foco diário é unir interfaces com design de alto padrão (UX/UI) a arquiteturas de back-end inteligentes.
             </p>
           </ScrollReveal>
-
+          <ScrollReveal delay={200}>
+            <p>
+              Minha base técnica é consolidada no ecossistema JavaScript. Arquiteto soluções completas utilizando o stack MERN (MongoDB, Express, React.js e Node.js), possuindo versatilidade para desenvolver projetos robustos que resolvem problemas reais de negócio e aumentam a receita das empresas.
+            </p>
+          </ScrollReveal>
           <ScrollReveal delay={300}>
             <p>
-              Iniciei minha jornada profissional cedo, em 2022, como Jovem
-              Aprendiz aos 19 anos na{" "}
-              <strong className="text-slate-200 font-medium">
-                Nova Presto
-              </strong>
-              , onde consolidei minha base em desenvolvimento web e boas
-              práticas de <em>Clean Code</em>. Essa vivência inicial foi
-              fundamental para que eu assumisse, em 2024, o cargo de
-              Desenvolvedor Front-end na{" "}
-              <strong className="text-slate-200 font-medium">
-                SMJ CodeSystem
-              </strong>
-              , focando na criação de sistemas de gerenciamento complexos e
-              interfaces responsivas.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={450}>
-            <p>
-              Minha especialidade reside no ecossistema JavaScript. Tenho
-              versatilidade para arquitetar soluções tanto com{" "}
-              <strong className="text-slate-200 font-medium">React.js</strong>{" "}
-              quanto com{" "}
-              <strong className="text-slate-200 font-medium">Vue.js</strong>,
-              aliado à agilidade do{" "}
-              <strong className="text-slate-200 font-medium">
-                Tailwind CSS
-              </strong>{" "}
-              para entregas acessíveis e visualmente impecáveis. Além de dominar
-              o consumo de APIs RESTful, fiz questão de desenvolver
-              conhecimentos introdutórios em Back-end. Essa visão sistêmica me
-              permite dialogar com clareza com toda a equipe técnica e propor
-              soluções integradas mais inteligentes.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={600}>
-            <p>
-              Sou um profissional movido pelo aprendizado constante. Atualmente,
-              estou cursando{" "}
-              <strong className="text-accent-blue font-medium">
-                Análise e Desenvolvimento de Sistemas pela Universidade Mogi das
-                Cruzes
-              </strong>
-              , fortalecendo minha base teórica para continuar criando produtos
-              digitais que geram impacto real e valor para os usuários.
+              Um dos meus grandes diferenciais competitivos é a integração nativa de ferramentas de Inteligência Artificial no meu fluxo de trabalho, utilizando a IA estrategicamente como um copiloto de alta performance para acelerar entregas e otimizar códigos complexos.
             </p>
           </ScrollReveal>
         </div>
-        <div className="lg:col-span-5 space-y-6">
-          <ScrollReveal delay={200}>
-            <div className="p-6 rounded-2xl bg-soft-black/80 backdrop-blur-sm border border-navy-blue-light/30 hover:border-accent-blue/40 transition-colors">
-              <div className="flex items-center gap-4 mb-3">
-                <div className="p-3 bg-navy-blue-light/20 rounded-lg text-accent-blue">
-                  <User size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-white">Perfil</h3>
-              </div>
-              <p className="text-slate-400 text-sm">
-                Profissional dedicado, comunicativo e apaixonado por resolver
-                problemas complexos através de interfaces intuitivas (UX/UI).
-              </p>
-            </div>
-          </ScrollReveal>
 
+        <div className="space-y-6">
           <ScrollReveal delay={350}>
             <div className="p-6 rounded-2xl bg-soft-black/80 backdrop-blur-sm border border-navy-blue-light/30 hover:border-accent-blue/40 transition-colors">
               <div className="flex items-center gap-4 mb-3">
                 <div className="p-3 bg-navy-blue-light/20 rounded-lg text-accent-blue">
                   <Code2 size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white">Versatilidade</h3>
+                <h3 className="text-xl font-bold text-white">
+                  Stack Principal
+                </h3>
               </div>
               <p className="text-slate-400 text-sm">
-                Domínio de React e Vue, escolhendo a melhor ferramenta para
-                garantir escalabilidade e performance em cada projeto.
+                Domínio profundo em React.js, Node.js e MongoDB. Especializado em estilização eficiente e moderna com Tailwind CSS para garantir visuais impecáveis.
               </p>
             </div>
           </ScrollReveal>
@@ -124,13 +65,11 @@ const AboutPage = () => {
                   <Terminal size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-white">
-                  Visão Sistêmica
+                  Arquitetura de Software
                 </h3>
               </div>
               <p className="text-slate-400 text-sm">
-                Foco total no Front-end, mas com a bagagem de Back-end
-                necessária para integrações de APIs eficientes e trabalho em
-                equipe fluido.
+                Desenvolvimento focado em SaaS Multi-tenant, controle hierárquico de acessos (RBAC), modelos Zero Trust e webhooks para assinaturas e pagamentos.
               </p>
             </div>
           </ScrollReveal>
@@ -142,13 +81,11 @@ const AboutPage = () => {
                   <BookOpen size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-white">
-                  Evolução Contínua
+                  Evolução Acadêmica
                 </h3>
               </div>
               <p className="text-slate-400 text-sm">
-                Graduação em Análise e Desenvolvimento de Sistemas (UMC)
-                prevista para 12/2027, mantendo-me sempre alinhado às melhores
-                práticas e novas tecnologias do mercado.
+                Graduando em Análise e Desenvolvimento de Sistemas (UMC), consolidando a base teórica e o compromisso com padrões rigorosos de segurança e versionamento de código.
               </p>
             </div>
           </ScrollReveal>

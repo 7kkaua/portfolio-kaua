@@ -19,70 +19,78 @@ const HomePage = () => {
 
         <div className="max-w-4xl text-center relative z-10">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-navy-blue-light/20 border border-accent-blue/30 text-accent-blue text-xs font-bold uppercase tracking-widest mb-8 cursor-default group hover:bg-navy-blue-light/40 transition-colors duration-300 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
-              <Briefcase
-                size={14}
-                className="shrink-0 animate-pulse"
-                aria-hidden="true"
-              />
-              <span className="leading-none tracking-wider">
-                Disponível para novos desafios
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-navy-blue-light/20 border border-accent-blue/30 text-accent-blue text-xs font-bold uppercase tracking-widest mb-8 cursor-default group hover:bg-navy-blue-light/40 transition-colors duration-300 shadow-[0_0_15px_rgba(56,189,248,0.15)]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-blue opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-blue"></span>
               </span>
+              Desenvolvedor Full-Stack
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
-            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[1.1] font-sans">
-              Transformando ideias em <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-blue-400 to-indigo-400 drop-shadow-sm">
-                interfaces funcionais.
+            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 leading-tight font-sans">
+              Construindo produtos <br className="hidden md:block" />
+              digitais de{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-blue-400 relative">
+                alto impacto.
+                <svg
+                  className="absolute w-full h-3 -bottom-1 left-0 text-accent-blue/30 -z-10"
+                  viewBox="0 0 100 10"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0 5 Q 50 10 100 5"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                    fill="transparent"
+                  />
+                </svg>
               </span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={300}>
-            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-              Desenvolvedor Front-end especializado na criação de experiências
-              digitais responsivas, intuitivas e estritamente centradas no
-              utilizador (UX).
+            <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+              Especializado no ecossistema JavaScript (MERN Stack). Arquiteto soluções completas, desde a concepção de interfaces premium até a engenharia de plataformas SaaS escaláveis e multi-tenant.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={450}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/projetos"
-                className="group w-full sm:w-auto px-10 py-4 bg-accent-blue text-white rounded-xl font-bold hover:bg-blue-600 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-accent-blue/20"
+                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-accent-blue text-white font-bold rounded-full hover:bg-blue-400 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/25 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-accent-blue/50"
               >
-                Ver Projetos
+                <Briefcase size={20} />
+                Explorar Projetos
                 <ChevronRight
-                  size={20}
+                  size={18}
                   className="group-hover:translate-x-1 transition-transform duration-300"
                 />
               </Link>
               <Link
-                to="/experiencia"
-                className="group w-full sm:w-auto px-10 py-4 bg-soft-black/50 backdrop-blur-sm text-white border border-slate-700 rounded-xl font-bold hover:border-accent-blue hover:bg-navy-blue/30 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-slate-700/50 transition-all duration-300 flex items-center justify-center gap-2"
+                to="/sobre"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-navy-blue-light/20 text-white font-bold rounded-full border border-navy-blue-light/50 hover:bg-navy-blue-light/40 transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-navy-blue-light/50"
               >
-                <UserRound
-                  size={18}
-                  className="text-slate-400 group-hover:text-accent-blue transition-colors duration-300"
-                />
-                Minha Trajetória
+                <UserRound size={20} />
+                Sobre Mim
               </Link>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-b from-navy-blue/5 to-soft-black border-y border-navy-blue-light/10 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 bg-gradient-to-b from-soft-black to-navy-blue-light/5">
+        <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Minha Especialidade
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-4 tracking-tight">
+                Minhas Especialidades
               </h2>
-              <div className="w-20 h-1 bg-accent-blue/50 mx-auto rounded-full" />
+              <p className="text-slate-400 max-w-2xl mx-auto">
+                Unindo design de alto padrão a uma engenharia de software inteligente e orientada a resultados.
+              </p>
             </div>
           </ScrollReveal>
 
@@ -96,11 +104,10 @@ const HomePage = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">
-                  Front-end Expertise
+                  Arquitetura SaaS
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Domínio de React.js e Vue.js para a entrega de layouts
-                  escaláveis, arquitetura moderna e performance otimizada.
+                  Construção de ecossistemas multi-tenant e white-label, desenvolvendo sistemas de permissão (RBAC) e lógicas avançadas de negócio.
                 </p>
               </div>
             </ScrollReveal>
@@ -114,11 +121,10 @@ const HomePage = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">
-                  Design Responsivo
+                  Full-Stack MERN
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Construção de interfaces estritamente centradas na experiência
-                  do utilizador (UX) utilizando o poder do Tailwind CSS.
+                  Domínio completo do stack JavaScript. Criação de interfaces responsivas e premium atreladas a back-ends robustos e seguros (Zero Trust).
                 </p>
               </div>
             </ScrollReveal>
@@ -132,12 +138,10 @@ const HomePage = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">
-                  Integração de APIs
+                  Integrações Complexas
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Experiência prática no consumo, tratamento de dados e
-                  integração de APIs RESTful para comunicação eficiente e
-                  segura.
+                  Experiência prática na integração de APIs de alta complexidade, incluindo motores de pagamento, assinaturas recorrentes e geolocalização.
                 </p>
               </div>
             </ScrollReveal>

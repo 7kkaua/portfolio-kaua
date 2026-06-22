@@ -5,22 +5,22 @@ import ScrollReveal from "../components/ScrollReveal";
 const ProjectsPage = () => {
   const projects = [
     {
-      title: "Adega Management System",
+      title: "Plataforma SaaS Alimentícia",
       description:
-        "Ecossistema Full Stack multi-tenancy com 5+ níveis de permissões, PDV físico e App Delivery integrados em tempo real.",
-      tags: ["React.js", "Node.js", "MongoDB Atlas", "Vercel"],
+        "Plataforma SaaS white-label para o setor alimentício com cardápio digital, sistema de permissões (RBAC) com 5 níveis, motor inteligente de conversão de estoque em tempo real e integração com o Google Maps para rotas logísticas.",
+      tags: ["MERN Stack", "RBAC", "Google Maps API", "White-label"],
     },
     {
-      title: "Barber-System",
+      title: "SaaS Barbearia & Clube VIP",
       description:
-        "Plataforma de gestão para barbearias com Clube de Assinaturas, gamificação de clientes e controle automatizado de filas.",
-      tags: ["MERN Stack", "Cron Jobs", "Gamification"],
+        "Ecossistema multi-tenant focado no gerenciamento completo de barbearias. Construção de um motor de assinaturas recorrentes (Clube VIP) 100% automatizado via webhooks do Mercado Pago, além de isenção inteligente no carrinho.",
+      tags: ["Node.js", "Mercado Pago API", "Webhooks", "MRR"],
     },
     {
-      title: "Studio-System",
+      title: "SaaS Studio de Estética",
       description:
-        "ERP/CRM para estética de alto padrão com Dashboard financeiro avançado e agenda interativa via Kanban Drag-and-Drop.",
-      tags: ["React", "Recharts", "Kanban", "Security"],
+        "Sistema de gestão para Studios de Beleza desenhado com arquitetura backend 'Zero Trust' garantindo isolamento absoluto de dados. Aplicação de técnicas de fatiamento de código (Code Splitting) para alta performance mobile.",
+      tags: ["React", "Zero Trust", "Segurança", "Micro-cache"],
     },
   ];
 
@@ -29,31 +29,30 @@ const ProjectsPage = () => {
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <ScrollReveal>
-        <header className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-5 font-sans">
-            Projetos de{" "}
+        <header className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4 font-sans">
+            Projetos em{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-blue-400">
-              Impacto
+              Destaque.
             </span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
-            Sistemas robustos desenvolvidos com foco em escalabilidade,
-            segurança e uma experiência de usuário impecável do início ao fim.
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            Sistemas e plataformas construídos do zero para resolver problemas reais de negócios.
           </p>
         </header>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
         {projects.map((project, index) => (
-          <ScrollReveal key={index} delay={index * 200}>
+          <ScrollReveal key={index} delay={index * 150}>
             <ProjectCard {...project} />
           </ScrollReveal>
         ))}
       </div>
 
       <ScrollReveal delay={300}>
-        <div className="mt-32 relative group">
-          <div className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 via-navy-blue/20 to-accent-blue/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+        <div className="relative group mx-auto max-w-3xl">
+          <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue to-blue-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
 
           <div className="relative p-12 md:p-16 rounded-3xl bg-soft-black/80 backdrop-blur-xl border border-navy-blue-light/30 text-center overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent-blue/50 to-transparent" />
@@ -63,7 +62,7 @@ const ProjectsPage = () => {
             </h3>
             <p className="text-slate-400 mb-10 text-lg max-w-xl mx-auto font-light">
               Confira meu repositório completo para explorar outros projetos,
-              contribuições open-source e experimentos técnicos.
+              contribuições e experimentos técnicos que construí ao longo da minha jornada.
             </p>
 
             <a
@@ -71,9 +70,9 @@ const ProjectsPage = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="Visitar o repositório completo no GitHub de Kauã Azeredo"
-              className="inline-flex items-center justify-center px-10 py-4 bg-white text-soft-black font-bold text-lg rounded-full hover:bg-accent-blue hover:text-white hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all duration-300 shadow-xl shadow-white/10 hover:shadow-accent-blue/30"
+              className="inline-flex items-center justify-center px-10 py-4 bg-white text-soft-black font-bold text-lg rounded-full hover:bg-accent-blue hover:text-white hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all duration-300 shadow-xl shadow-white/10"
             >
-              Visitar GitHub Completo
+              Acessar meu GitHub
             </a>
           </div>
         </div>
